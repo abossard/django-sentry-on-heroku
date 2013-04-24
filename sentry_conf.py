@@ -5,7 +5,7 @@ from sentry.conf.server import *
 import os
 from urlparse import urlparse
 
-database_url = os.environ.get('DATABASE_URL',
+database_url = os.environ.get('HEROKU_POSTGRESQL_COBALT_URL',
                               'postgres://sentry:sentry@localhost/sentry')
 db = urlparse(database_url)
 
